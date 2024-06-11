@@ -1,0 +1,79 @@
+{
+  "name": "DigitalMarketplace",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "Manejar la creación de la aplicación",
+      "args": [
+        {
+          "name": "unitaryPrice",
+          "type": "uint64",
+          "desc": "El precio al que se venderá el asset"
+        },
+        {
+          "name": "assetId",
+          "type": "uint64",
+          "desc": "El id del asset que se venderá"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "setPrice",
+      "desc": "Metodo para modificar el precio de venta",
+      "args": [
+        {
+          "name": "unitaryPrice",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "optInToAsset",
+      "desc": "Metodo para que el contrato haga optin al asset y reciba los assets a vender",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay",
+          "desc": "La transaccion para cubrir el balance minimo del contrato"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "buy",
+      "desc": "Metodo para que los usuarios compren assets",
+      "args": [
+        {
+          "name": "quantity",
+          "type": "uint64",
+          "desc": "La cantidad de assets a comprar"
+        },
+        {
+          "name": "buyerTxn",
+          "type": "pay",
+          "desc": "Transaccion de pago por la compra de Assets"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "deleteApplication",
+      "desc": "Metodo para cobrar las ganancias de la venta y recuperar los assets no vendidos",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
